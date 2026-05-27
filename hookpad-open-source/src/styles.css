@@ -1,0 +1,513 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #16211e;
+  background: #f4f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  padding: 22px;
+  background:
+    linear-gradient(135deg, rgba(18, 88, 94, 0.13), transparent 32%),
+    linear-gradient(315deg, rgba(217, 88, 45, 0.11), transparent 36%),
+    #f4f7f5;
+}
+
+.topbar,
+.status-line,
+.overview-grid,
+.console-grid,
+.evidence-grid {
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.brand,
+.network,
+.status-line,
+.panel-heading,
+.section-title,
+.row,
+.result-card a,
+.balance,
+.scenario,
+.result-card div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 11px;
+}
+
+.brand > svg {
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #123f43;
+}
+
+.brand strong,
+.brand span,
+.panel-heading span,
+.verdict-panel > span,
+.metric span,
+.balance span,
+.row span,
+.step span {
+  display: block;
+}
+
+.brand strong {
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.brand span,
+.panel-heading span,
+.verdict-panel > span,
+.metric span,
+.balance span,
+.row span,
+.step p,
+.feature p,
+.logic-list p,
+.status-line span {
+  color: #5c6b65;
+}
+
+.network {
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid rgba(18, 63, 67, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #123f43;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-line {
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(18, 63, 67, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 34px rgba(29, 39, 35, 0.08);
+}
+
+.status-line a {
+  margin-left: auto;
+  color: #0d6c67;
+  font-weight: 900;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.console-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(310px, 0.8fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(280px, 0.85fr) minmax(340px, 1fr);
+  gap: 14px;
+}
+
+.panel {
+  border: 1px solid rgba(18, 63, 67, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 54px rgba(29, 39, 35, 0.1);
+}
+
+.live-panel,
+.verdict-panel,
+.intro-panel,
+.usage-panel,
+.evidence-grid .panel {
+  padding: 20px;
+}
+
+.panel-heading {
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panel-heading span,
+.verdict-panel > span,
+.section-title {
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 4px 0 0;
+  font-size: 34px;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.connect {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #123f43;
+  color: #ffffff;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.balances {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, minmax(0, 0.7fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.balance {
+  gap: 8px;
+  min-height: 76px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #eef4f1;
+}
+
+.balance svg {
+  color: #c84b2f;
+  flex: 0 0 auto;
+}
+
+.balance strong {
+  display: block;
+  margin-left: auto;
+  color: #122f30;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.scenario {
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 74px;
+  padding: 13px;
+  border: 1px solid rgba(18, 63, 67, 0.12);
+  border-radius: 8px;
+  background: #123f43;
+  color: #ffffff;
+  text-align: left;
+}
+
+.scenario.danger {
+  background: #8d2e25;
+}
+
+.scenario.active {
+  outline: 3px solid rgba(216, 86, 42, 0.28);
+}
+
+.scenario strong,
+.scenario span {
+  display: block;
+}
+
+.scenario span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.result-card {
+  margin-top: 14px;
+  padding: 17px;
+  border-radius: 8px;
+  border: 1px solid rgba(18, 63, 67, 0.12);
+  background: #f6f8f6;
+}
+
+.result-card.success {
+  background: #dcefe2;
+  border-color: rgba(43, 117, 66, 0.24);
+}
+
+.result-card.blocked {
+  background: #ffe0d8;
+  border-color: rgba(143, 51, 33, 0.25);
+}
+
+.result-card.pending {
+  background: #fff0c9;
+  border-color: rgba(151, 104, 19, 0.22);
+}
+
+.result-card div:first-child {
+  gap: 9px;
+  color: #123f43;
+}
+
+.result-card p,
+.verdict-panel p,
+.step p,
+.feature p,
+.logic-list p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.result-card a {
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0d6c67;
+  font-weight: 900;
+}
+
+.verdict {
+  margin: 14px 0;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.verdict.pass {
+  color: #123f2e;
+  background: #cfead5;
+}
+
+.verdict.block {
+  color: #641e16;
+  background: #ffd6cb;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric {
+  min-height: 78px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #eef4f1;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.section-title {
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #123f43;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.feature,
+.logic-list > div {
+  min-height: 116px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #eef4f1;
+}
+
+.feature strong,
+.logic-list strong,
+.step span {
+  color: #16211e;
+  font-weight: 900;
+}
+
+.feature p,
+.logic-list p,
+.step p {
+  font-size: 14px;
+}
+
+.steps,
+.logic-list {
+  display: grid;
+  gap: 9px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f0f5f2;
+}
+
+.step > strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #123f43;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.rows {
+  display: grid;
+  gap: 8px;
+}
+
+.row {
+  gap: 9px;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  background: #f0f5f2;
+}
+
+.row.primary-row {
+  background: #e7f2ec;
+}
+
+.row.local-row {
+  background: #fff5df;
+}
+
+.row code {
+  color: #123f43;
+  font-size: 12px;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  main {
+    padding: 14px;
+  }
+
+  .console-grid,
+  .overview-grid,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-heading,
+  .topbar,
+  .status-line {
+    align-items: flex-start;
+  }
+
+  .topbar,
+  .panel-heading,
+  .status-line {
+    flex-direction: column;
+  }
+
+  .status-line a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .balances,
+  .scenario-grid,
+  .metric-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect,
+  .network,
+  .scenario {
+    width: 100%;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+  }
+}

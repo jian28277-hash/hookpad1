@@ -1,0 +1,73 @@
+{
+  "network": "xlayerTestnet",
+  "chainId": 1952,
+  "deployer": "0xbaf5e0801964eaFABED9bad115f8C4C78a6161B6",
+  "contracts": {
+    "mockToken": "0xe1D4c997CC3d56C4d08a208eA9031EB38E6706B8",
+    "feeVault": "0x6aFbEc2C0fc95D23B8fe9D727Ea95E38A9317Cd5",
+    "fairLaunchHook": "0x2B0c89b00F715f5f396D588b1b629FCa4945cB90",
+    "launchDemoPool": "0x815c28579466c17Ac2fE9B45DE492b98aEa832e5",
+    "openDemoPool": "0x0d9257d2DF0c39c67A249e16d28a88399dD83322",
+    "mockUSDC": "0x80A8C0611A0de0f7bf4f8Ac21B2eB6334B43F360",
+    "launchMarketPool": "0x1bC1825De81D7f5d56335F80f158140D0331C0ca",
+    "openMarketPool": "0x0d2AD406D6A5912D4f9A2A156B4fB0bd61816d5f"
+  },
+  "explorer": "https://www.okx.com/web3/explorer/xlayer-test",
+  "createdAt": "2026-05-26T05:48:11.453Z",
+  "demo": {
+    "launchDemoPool": "0x815c28579466c17Ac2fE9B45DE492b98aEa832e5",
+    "launchPoolId": "0x12fea49d37ece228ca261d468e87613321caeb21194891618fb62012e9d2f564",
+    "openDemoPool": "0x0d9257d2DF0c39c67A249e16d28a88399dD83322",
+    "openPoolId": "0xb0a109e7d6878a1c135552af7fcc522958295975e4f767f98d555d1f4fca7ccd",
+    "transactions": {
+      "approvals": [
+        "0xc287c915c90419cd8b747bc1b9396d65cce9f08af336c9cace97346da8588c8c",
+        "0xc5e6936f354a4941e68f073faa86c827e44b4c1ed09983ea3ac3608a1abf7668"
+      ],
+      "smallBuyAllowed": "0xb8363ec92ab2e22b92826a8575d0d3ae09d35275d919dbc6f15ed29233a894a1",
+      "largeBuyBlocked": "0xceb20a70181bbe3531def9aa743b7d94401b322536262a0d2cbaf5dd32b947ae",
+      "openMarketBuyAllowed": "0x20524512798ff9b1c1a3968c518eca0c6bf23d242b5668671c58e4e7268b7c44"
+    },
+    "updatedAt": "2026-05-26T06:24:07.925Z",
+    "transactionStatus": {
+      "smallBuyAllowed": 1,
+      "largeBuyBlocked": 0,
+      "openMarketBuyAllowed": 1,
+      "blockNumber": 31317811
+    }
+  },
+  "realPurchaseDemo": {
+    "mockUSDC": "0x80A8C0611A0de0f7bf4f8Ac21B2eB6334B43F360",
+    "launchMarketPool": "0x1bC1825De81D7f5d56335F80f158140D0331C0ca",
+    "launchMarketPoolId": "0x45a26545462d8fceec6ebc43f3a74a81df9215d4abcf7b56c746f712af5aa38a",
+    "openMarketPool": "0x0d2AD406D6A5912D4f9A2A156B4fB0bd61816d5f",
+    "openMarketPoolId": "0x28f30553d073ffa167ee2d2e17e430ad3757e734fb748f4ec7483d0cd4c4a7ff",
+    "transactions": {
+      "approvals": [
+        "0xddbe08e0f564eabbd768c569c4f2e8f16448c70cae925015b9083c4acbb04797",
+        "0x67aeddf860bb9e0a454041a3e9f9f9f1332abbe450ec02f7b4aab0757514a62b"
+      ],
+      "realSmallPurchase": "0xcb6d420ce7a5305870faa7f1283eb002a4fa3ab20e6bd50198df32c5f266c192",
+      "realLargePurchaseBlocked": "0x1e5e4a67fa2e6bcb2cc40bcaec4819cc3a2948c07f8a26560fdef0f1653c5de1",
+      "realOpenMarketPurchase": "0xb3ec618a06168ed8b91bda1c332a3a684f4b15a5742c77559ff61d24c6b6fdad"
+    },
+    "updatedAt": "2026-05-27T04:50:46.563Z",
+    "transactionStatus": {
+      "realSmallPurchase": 1,
+      "realLargePurchaseBlocked": 0,
+      "realOpenMarketPurchase": 1,
+      "blocks": {
+        "realSmallPurchase": 31319483,
+        "realLargePurchaseBlocked": 31319484,
+        "realOpenMarketPurchase": 31319485
+      }
+    },
+    "liveRedeploy": {
+      "launchMarketPool": "0x1bC1825De81D7f5d56335F80f158140D0331C0ca",
+      "launchMarketPoolId": "0x45a26545462d8fceec6ebc43f3a74a81df9215d4abcf7b56c746f712af5aa38a",
+      "launchStart": 1779857414,
+      "seedTx": "0x40f7a13fd27a0c96b0f9aa29f18fd2e0a1f00af98c9000c3b345ccda7e411f71",
+      "updatedAt": "2026-05-27T04:50:46.563Z"
+    }
+  }
+}

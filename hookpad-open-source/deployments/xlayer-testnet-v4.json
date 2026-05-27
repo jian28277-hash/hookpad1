@@ -1,0 +1,27 @@
+{
+  "network": "xlayerTestnet",
+  "chainId": 1952,
+  "explorer": "https://www.okx.com/web3/explorer/xlayer-test",
+  "deployer": "0xbaf5e0801964eaFABED9bad115f8C4C78a6161B6",
+  "note": "Self-deployed Uniswap V4 PoolManager on X Layer testnet because no official X Layer testnet PoolManager bytecode was found.",
+  "uniswapV4": {
+    "poolManager": "0xda0a1F6edcc326c2165e369784de33d89c76a526",
+    "hook": "0x3924dfaDf54b396Feee3790cbfB98a49671E00C0",
+    "hookFlags": "BEFORE_SWAP | AFTER_SWAP",
+    "create2HookDeployer": "0x6d2B021b1A1327677153F3fB04D2D1d4ED307918",
+    "hpad": "0x415Af291bE1f724D13BB06Bac8942620662f0469",
+    "mockUSDC": "0xA398712bbBB5A46e2Bd1c42d9c4D9159E878d662",
+    "poolKey": {
+      "currency0": "0x415Af291bE1f724D13BB06Bac8942620662f0469",
+      "currency1": "0xA398712bbBB5A46e2Bd1c42d9c4D9159E878d662",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x3924dfaDf54b396Feee3790cbfB98a49671E00C0"
+    },
+    "transactions": {
+      "deployHook": "0x2f8e2f7a5cbda8c9916578e049ca021ce9701eb59c44147dad23b1eb953fafbb",
+      "initializePool": "0xaf74947699affd06b4b6ade13977f5358799ca00fe086192fe252e200623e4bd"
+    }
+  },
+  "updatedAt": "2026-05-26T15:41:41.425Z"
+}
